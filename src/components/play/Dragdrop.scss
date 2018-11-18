@@ -1,0 +1,209 @@
+// tab1
+#tab-1, #tab-2, #tab-3, #tab-4{
+    display: none;
+}
+/* span:target */#tab-1:target,
+#tab-2:target,
+#tab-3:target,
+#tab-4:target{
+border: solid 1px #316DB5;
+
+}
+
+/*頁籤變換*/#tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+#tab-3:target ~ #tab > ul li a[href$="#tab-3"],
+#tab-4:target ~ #tab > ul li a[href$="#tab-4"] {
+border: solid 1px #316DB5;
+}
+
+/*頁籤內容顯示*/#tab-1:target ~ #tab > div.tab-content-1,
+#tab-2:target ~ #tab > div.tab-content-2,
+#tab-3:target ~ #tab > div.tab-content-3,
+#tab-4:target ~ #tab > div.tab-content-4 {
+border: solid 1px #316DB5;
+}
+
+/* 美化 */
+#tab{
+width: 100%;
+background: #316DB5;
+border-right: solid 16px #316DB5;
+border-left: solid 16px #316DB5;
+border-bottom: solid 16px #316DB5;
+border-top: solid 0px #316DB5;
+border-radius: 16px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+// color : white;
+}
+/* 頁籤ul */#tab>ul{
+overflow: hidden;
+margin: 0;
+padding: 10px 20px 0 20px;
+
+}
+#tab>ul>li{
+list-style-type: none;
+
+
+}
+#tab>ul>li>a{
+text-decoration: none;
+font-size: 13px;
+// color: #333;
+float: left;
+padding: 10px;
+margin-left: 5px;
+border-radius: 6px;
+color : white;
+font-size: 18px;
+padding-right: 20px;
+padding-left: 20px;
+}
+
+/*頁籤div內容*/#tab>div {
+clear:both;
+padding:0 15px;
+height:0;
+overflow:hidden;
+visibility:hidden;
+-webkit-transition:all .4s ease-in-out;
+-moz-transition:all .4s ease-in-out;
+-ms-transition:all .4s ease-in-out;
+-o-transition:all .4s ease-in-out;
+transition:all .4s ease-in-out;
+}
+
+/* span:target */#tab-1:target,
+#tab-2:target,
+#tab-3:target,
+#tab-4:target{
+border: solid 1px #316DB5;
+}
+
+/*第一筆的底色*/span:target ~ #tab > ul li:first-child a {
+background:#316DB5;
+}
+span:target ~ #tab > div:first-of-type {
+visibility:hidden;
+height:0;
+padding:0 15px;
+}
+
+/*頁籤變換&第一筆*/span ~ #tab > ul li:first-child a,
+#tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+#tab-3:target ~ #tab > ul li a[href$="#tab-3"],
+#tab-4:target ~ #tab > ul li a[href$="#tab-4"] {
+background: #fff;
+width:100px;
+color: black;
+box-shadow:5px 10px rgba(20%,20%,40%,0.5);
+}
+
+
+/*頁籤內容顯示&第一筆*/span ~ #tab > div:first-of-type,
+#tab-1:target ~ #tab > div.tab-content-1{
+visibility:visible;
+height:500px;
+background: url(/images/play_wood.jpg);
+border-radius: 6px;
+
+}
+
+#tab-2:target ~ #tab > div.tab-content-2{
+visibility:visible;
+height:500px;
+background: url(/images/paper.jpg);
+border-radius: 6px;
+
+
+}
+
+#tab-3:target ~ #tab > div.tab-content-3{
+visibility:visible;
+height:500px;
+background: url(/images/carving.jpg);
+border-radius: 6px;
+
+}
+#tab-4:target ~ #tab > div.tab-content-4 {
+visibility:visible;
+height:500px;
+background: url(/images/card.jpg);
+border-radius: 6px;
+
+}
+
+
+
+
+
+
+
+
+//contents
+.Y_play_contents{
+    width: 150px;
+    height: 150px;
+    margin: 16px;
+}
+
+// tag2
+#tab-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+    // margin: 0 auto;
+    padding-top: 0px !important;
+    font-family: arial;
+    border: 16px solid #316DB5;
+    // background: #316DB5;
+}
+#tab-panel .tabs {
+    margin-bottom: 20px;
+    background: #4C4C4C;
+    overflow: hidden;
+    text-align: center;
+    border: 0px solid #4C4C4C !important;
+    border-radius: 4px;
+    
+}
+#tab-panel .tabs a {
+    float: left;
+    display: block;
+    width: 20%;
+    padding: 15px 0;
+    border: 0px solid transparent !important;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+#tab-panel .tabs a.active {
+    background: white;
+    color: black;
+}
+#tab-panel .tab-content {
+    // border: 1px solid #CCC;
+    padding: 8px 0;
+
+
+}
+#tab-panel .tab-content > li {
+    display: none;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+    line-height: 25px;
+    display: flex ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+// .Y_tab-content_flex{
+//     display: flex ;
+//     flex-direction: row !important;
+//     // flex-wrap: wrap !important;
+//  }
